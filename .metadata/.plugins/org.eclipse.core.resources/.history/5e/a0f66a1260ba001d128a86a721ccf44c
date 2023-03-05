@@ -1,0 +1,22 @@
+package weddinghallpublisher;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+
+public class WeddingHallActivator implements BundleActivator {
+
+	private static BundleContext context;
+
+	static BundleContext getContext() {
+		return context;
+	}
+
+	public void start(BundleContext bundleContext) throws Exception {
+		WeddingHallActivator.context = bundleContext;
+	}
+
+	public void stop(BundleContext bundleContext) throws Exception {
+		WeddingHallActivator.context = null;
+	}
+
+}

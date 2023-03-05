@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FlowerServicePublisher
+Bundle-SymbolicName: FlowerDecorationServicePublisher
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: flowerPublisher.FlowerPublisherActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: flowerPublisher,
+ org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: FlowerServicePublisher
+Export-Package: flowerPublisher
+
+
+
+
+
+
+
+
+

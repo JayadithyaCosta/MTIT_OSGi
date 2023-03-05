@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: WeddingDressesSubscriber
+Bundle-SymbolicName: WeddingDressesSubscriber
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: weddingdressessubscriber.WeddingDressesSubscriberActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: WeddingDressesSubscriber
+Import-Package: org.osgi.framework;version="1.3.0",
+ weddingdressespublisher
+Bundle-ActivationPolicy: lazy

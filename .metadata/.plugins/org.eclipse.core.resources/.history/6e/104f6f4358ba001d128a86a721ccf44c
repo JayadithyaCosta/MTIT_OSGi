@@ -1,0 +1,152 @@
+package weddinghallpublisher;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class WeddingHallImpl implements WeddingHall {
+
+	@Override
+	public void WeddingHall() {
+		
+		Scanner scanner = new Scanner(System.in);
+
+//		System.out.println("* * * * * * * *  Thank you for visiting our online cake store* * * * * * * *");
+//		System.out.println("");
+		System.out.println("* * * * * * * *  Welcome to Wedding Hall & Food Arrangement Service  * * * * * * * * ");
+		System.out.println("");
+		System.out.print("Please Give Your Name : ");
+		String Yname = scanner.next();
+
+		System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  * * * ");
+		System.out.println(" ");
+		System.out.println(" WELCOME !! " + Yname);
+		System.out.println("");
+		System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+		int choice = 1;
+		
+		while (choice == 1) {
+			
+			System.out.println("");
+			System.out.println("**** *** ** *  Wedding Hall & Food Arrangement Service *  ** *** ****");
+			System.out.println("");
+			
+
+			System.out.print("Do you already have a reservation? [1 = Yes || 2 = No]: ");
+			int ord = scanner.nextInt();
+			System.out.println("");
+			
+
+			double totArrangementPrice = 0;
+			double totPrice = 0;
+			
+
+			Random random = new Random();
+			int dispatch_number = random.nextInt(1000);
+			int order_Number = random.nextInt(1000);
+
+			
+			if (ord == 1) {
+
+				int choice1 = 1;
+
+				while (choice1 == 1) {
+
+					System.out.print("Please Enter the reservation number :  ");
+					String orderNumber = scanner.next();
+					
+					System.out.print("Please Enter name under reservation  :  ");
+					String reservationName = scanner.next();
+
+					
+					System.out.print("Please Enter Location:  [1 = Inside Colombo || 2 = Outside Colombo]: ");
+					double area = scanner.nextInt();
+					double additionalPrice = area == 1 ? 1500.00 : 2500.00;
+					System.out.println("");
+					
+					if (area == 1) {
+						
+						System.out.println("Reservation Number \t: " + orderNumber);
+						System.out.println("Job Number\t: " + dispatch_number);
+						System.out.println("Job Area\t: " + (area == 1 ? "Inside Colombo" : "Outside Colombo"));
+						System.out.println("Additional Charges\t: " + additionalPrice);
+						System.out.println("Arrangement Total Price \t: " + totPrice);
+						
+						System.out.println("");
+						System.out.println("Do you want to keep going ? [Type 1 = Yes | Type 2 = No] : ");
+						choice= scanner.nextInt();
+
+						if (choice == 2) {
+							
+							System.out.println("");
+							System.out.println("* ! * ! * ! * ! * ! * ! * ! Thank You * ! * ! * ! * ! * ! * ! * ! *");
+							System.out.println();
+							break;
+						}
+						
+						
+						else {
+							System.out.println("Arrangement Total Price \t: " + totPrice);
+							
+							System.out.println("");
+							System.out.println("Do you want to keep going ? [Type 1 = Yes | Type 2 = No] : ");
+							choice= scanner.nextInt();
+
+							if (choice == 2) {
+								
+								System.out.println("");
+								System.out.println("* ! * ! * ! * ! * ! * ! * ! Thank You * ! * ! * ! * ! * ! * ! * ! *");
+								System.out.println();
+							}
+							
+							break;
+
+						}
+						
+					} else {
+						
+						System.out.println("Reservation Number \t: " + orderNumber);
+						System.out.println("Job Number\t: " + dispatch_number);
+						System.out.println("Job Area\t: " + (area == 1 ? "Inside Colombo" : "Outside Colombo"));
+						System.out.println("Arrangement Total Price \t: " + totPrice);
+						
+						System.out.println("");
+						System.out.println("Do you want to keep going ? [Type 1 = Yes | Type 2 = No] : ");
+						choice= scanner.nextInt();
+
+						if (choice == 2) {
+							
+							System.out.println("");
+							System.out.println("* ! * ! * ! * ! * ! * ! * ! Thank You * ! * ! * ! * ! * ! * ! * ! *");
+							System.out.println();
+						}
+					
+							return;
+						}
+					}
+				
+				}
+			
+			else {
+				
+			}
+
+			
+			while (choice != 1 && choice != 2) {
+				
+				System.out.println("");
+				System.out.println("Invalid Input!");
+				choice = scanner.nextInt();
+
+				if (choice == 2) {
+					
+					System.out.println("");
+					System.out.println("* * * * * * * * * * * * * * * * * Thank You * * * * * * * * * * * * * * * * * * * * * *");
+					System.out.println("");
+				}
+			}
+		}
+		
+	}
+	
+}
